@@ -1,0 +1,343 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.2.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+french, %english, % ngerman for German
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+%\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{palatino} % Use the Palatino font by default
+\usepackage{comment}
+\usepackage[backend=bibtex,style=numeric,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation
+\usepackage{pdfpages}
+\usepackage{moreverb}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{adjustbox}
+
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
+
+\addbibresource{hdr.bib} % The filename of the bibliography
+
+%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=1cm,% 1.5cm, % Inner margin
+	outer=1.5cm, %2.8cm, % Outer margin
+	bindingoffset=2cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe,% show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Intégration de Données Multi-Echelles et Extraction de Connaissances en Agronomie: Exemples et Perspectives}% Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\degree{Habilitation \'{a} Diriger des Recherches } % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Pierre \textsc{Larmande}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Computer Science} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{}{Univ. Montpellier, Ecole doctorale I2S, Informatique}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{\href{}{UMR DIADE}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{}{IRD}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{}{Montpellier, France}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+%\begin{figure}[!ht]
+\begin{tabular}{ l l l}
+\includegraphics[width=2.5cm]{logoUM.png} & \hspace{7cm}  & \includegraphics[width=2.5cm]{logoIRD.png}
+\end{tabular} 
+%\end{figure}
+\vspace{1.5cm}
+\begin{center}
+
+\textsc{\LARGE Habilitation \'{a} Diriger des Recherches}\\[0.5cm] % Thesis type
+
+{\scshape\Large \univname\par}\vspace{1.5cm} % University name
+
+
+\HRule \\[0.4cm] % Horizontal line
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+\HRule \\[1.5cm] % Horizontal line
+ 
+%\begin{minipage}[t]{0.4\textwidth}
+%\begin{flushleft} \large
+\begin{center}
+\huge \emph{Pierre Larmande}
+\end{center}
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}[t]{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisor:} \\
+%\end{flushright}
+%\end{minipage}\\[3cm]
+ 
+%\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+%\textit{in the}\\[0.4cm]
+\begin{center}
+\Large IRD\\
+\Large UMR DIADE\\
+\large Montpellier, France
+\end{center}
+% Research group name and department name
+\vspace{1cm}
+{\today}
+\vspace{1cm}
+\\
+
+\begin{center}
+	JURY
+\end{center}
+
+\footnotesize
+\begin{tabular}{ l l l}
+Catherine FARON-ZUCKER  & Maître de Conference, HDR, Univ. de Sophia Antipolis, Nice   & Rapporteur \\ 
+Juliette DIBIE-BARTHELEMIE & Professeur, AgroParisTech, Paris & Rapporteur \\ 
+Claire NEDELLEC  & Directeur de Recherche, INRA MAIAGE, Paris & Rapporteur \\ 
+Thérèse LIBOUREL & Professeur, Univ. de Montpellier  & Examinateur \\ 
+Isabelle MOUGENOT & Maître de Conference, HDR, Univ. de Montpellier  & Examinateur \\ 
+Manuel RUIZ & Directeur de Recherche, CIRAD, Montpellier & Examinateur \\ 
+Hadi QUESNEVILLE & Directeur de Recherche, INRA, Versailles & Examinateur \\ 
+\end{tabular}
+\normalsize
+
+\vfill
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+
+
+%\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+%\vspace*{0.2\textheight}
+
+%\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+
+%\hfill Dave Barry
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+%\begin{comment}
+%\begin{abstract}
+%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+%
+%The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+%
+%\end{abstract}
+%\end{comment}
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\begin{acknowledgements}
+%\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+%
+%First of all, I would thank my colleagues at the UMR TETIS and at LIRMM for their fruitful discussion and exchanges. 
+%I thank the members of the Advanse team for their positive influence on my researches and on the person who I am now. 
+%During these years, I had also the possibility and the privilege to collaborate with many researchers outside France. 
+%These collaborations teach me a lot and help me to grow both professionally and personally. 
+%I would also thank the members of the jury to have accepted to review my HDR.
+%Last but not least, I  thank all my family for their education, support and love they gave me.
+%
+%
+%\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+%\listoffigures % Prints the list of figures
+
+%\listoftables % Prints the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+URI  & Uniform Resource Identifier \\
+IRI & International Resource Identifier\\
+
+\end{abbreviations}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+
+\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+
+% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+
+	Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+%Constant Name & $Symbol$ & $Constant Value$ with units\\
+
+\end{constants}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+
+$a$ & distance & \si{\meter} \\
+$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%Symbol & Name & Unit \\
+
+\addlinespace % Gap to separate the Roman symbols from the Greek
+
+$\omega$ & angular frequency & \si{\radian} \\
+
+\end{symbols}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\dedicatory{A Sophie, Nina et Salomé \ldots} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+\part{CV étendu} % Main chapter title
+\label{cv} % For referencing the chapter elsewhere, use \ref{Chapter1}
+\include{Chapters/Intro}
+%\include{Chapters/ChapterTemplate}
+\include{Chapters/Contrib}
+\include{Chapters/publications}
+%\includepdf[pages={11-23}]{Larmande_manuscript.pdf}
+%\include{Chapters/Contributions}
+\part{Intégration de Données Multi-Echelles et Extraction de Connaissances en Agronomie: Exemples et Perspectives} % Main chapter title
+\label{Perspectives}
+\include{Chapters/Perspective}
+%\include{Chapters/Chapter2} 
+%\include{Chapters/Chapter3}
+%\include{Chapters/Chapter4} 
+%\include{Chapters/Chapter5} 
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+%\include{Appendices/AppendixA}
+%\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+
+\chapter{Article 1}
+\includepdf[pages={1-15}]{Biosemantic.pdf}
+
+\chapter{Article 2}
+\includepdf[pages={1-14}]{NER.pdf}
+
+\chapter{Article 3}
+\includepdf[pages={1-27}]{AgroLD.pdf}
+
+
+
+
+
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+
+
+%\bibliographystyle{plain}
+%\bibliography{hdr.bib}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
