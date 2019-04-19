@@ -75,7 +75,7 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Intégration de Données Multi-Echelles et Extraction de Connaissances en Agronomie: Exemples et Perspectives}% Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Intégration de Données Multi-Echelles et Extraction de Connaissances en Agronomie : Exemples et Perspectives}% Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Habilitation \'{a} Diriger des Recherches } % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -188,30 +188,43 @@ Hadi QUESNEVILLE & Directeur de Recherche, INRA, Versailles & Examinateur \\
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
-%\begin{comment}
-%\begin{abstract}
-%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-%
-%The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
-%
-%\end{abstract}
-%\end{comment}
+% \begin{comment}
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+La compréhension des relations génotype-phénotype est un des axes les plus important de la recherche en agronomie. Or les interactions génotype-phénotype sont complexes à identifier car elles s'expriment à différentes échelles moléculaires dans la plante et subissent de fortes influences de la part des facteurs environnementaux. Les technologies d'analyses haut-débit ne permettent de capturer que partiellement cette dynamique. Même si ces technologies permettent d'aller toujours plus loin dans l'obtention de nouvelles données, notre connaissance reste encore parcellaire pour élucider les mécanismes moléculaires qui régissent l'expression des caractères phénotypiques complexes. Les nouveaux défis consistent à comprendre les relations complexes existant entre les différents éléments moléculaires responsables de l'expression du phénome. Cet objectif ne peut être atteint qu'en intégrant des informations de différents niveaux dans un modèle intégrateur utilisant une approche systémique afin de comprendre le fonctionnement réel d'un système biologique. \\
+
+Mon projet de recherche aborde le problème suivant : Comment structurer et gérer la complexité des données biologiques afin d’en extraire de la connaissance permettant d’identifier les mécanismes moléculaires contrôlant l’expression de phénotypes chez les plantes.\\
+
+L’objectif de ce projet sera de déterminer si la représentation d’information sous forme de graphes de connaissances est adaptée pour formuler des hypothèses de recherche permettant de lier le génotype au phénotype. En prenant le riz comme modèle, l’objectif sera de construire des réseaux d’interaction moléculaires à partir de données éparses afin d’identifier les gènes clés pour l’amélioration des plantes.
+Plusieurs approches de recherche sont envisagées : intégration des données, enrichissement des connaissances, applications sur les graphes de connaissances.\\ 
+Dans ce processus, une première voie consistera à transformer et intégrer dynamiquement ces données dans la base de connaissance AgroLD pour les rendre plus facilement utilisables en terme algorithmique. Une deuxième voie consistera à proposer de nouvelles méthodes d'enrichissement des connaissances. Dans un premier temps, en se focalisant sur des méthodes d’annotation sémantique. Puis, afin d'enrichir les liens entre les différents graphes générés et ainsi produire un réseau d’interaction qui permettra la découverte de nouvelles connaissances, de nouvelles méthodes de liage de données seront développées. Enfin, afin de permettre une recherche d’information efficace, plusieurs méthodes et algorithmes de priorisation de gènes candidats seront évaluées et proposées. 
+
+\end{abstract}
+% \end{comment}
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
 
-%\begin{acknowledgements}
-%\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-%
-%First of all, I would thank my colleagues at the UMR TETIS and at LIRMM for their fruitful discussion and exchanges. 
-%I thank the members of the Advanse team for their positive influence on my researches and on the person who I am now. 
-%During these years, I had also the possibility and the privilege to collaborate with many researchers outside France. 
-%These collaborations teach me a lot and help me to grow both professionally and personally. 
-%I would also thank the members of the jury to have accepted to review my HDR.
-%Last but not least, I  thank all my family for their education, support and love they gave me.
-%
-%
-%\end{acknowledgements}
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\\
+\\
+\\
+Tout d’abord, je voudrai remercier mes collègues de l’UMR DIADE, de la plate-forme SouthGreen et du LIRMM pour leurs discussions et échanges fructueux.\\
+
+Je remercie les membres de l'équipe RICE et de l'équipe FADO pour leur influence positive sur mes recherches et sur la construction de mon projet de recherche.\\
+
+J'ai une pensée particulière pour mon Directeur d'unité Alain Ghesquière, qui a su me faire confiance et m'encourager durant ces 10 dernières années.\\
+
+Au cours de ces années, j'ai également eu l'opportunité et le privilège de collaborer avec de nombreux chercheurs Français et étrangers.
+Ces collaborations m'ont beaucoup appris et m'ont aider à construire ce projet.\\
+
+Je remercie également chaleureusement Thérèse Libourel, qui m'a encadrée durant ma thèse et plus récemment soutenue dans ce projet d'écriture.\\
+
+Je voudrais également remercier les membres du jury d'avoir accepté d'évaluer mon HDR.\\
+
+Enfin et surtout, je remercie toute ma famille pour leur soutien et leur amour.\\
+\end{acknowledgements}
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -226,27 +239,46 @@ Hadi QUESNEVILLE & Directeur de Recherche, INRA, Versailles & Examinateur \\
 %----------------------------------------------------------------------------------------
 %	ABBREVIATIONS
 %----------------------------------------------------------------------------------------
-\begin{comment}
+%\begin{comment}
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+%\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+ADN & Acide Désoxyribo Nucléique\\
+ARN & Acide Ribo Nucléique\\
 API & Application Programing Interface\\
 BDR &  base de données relationnelles\\
-CGIAR & Consultative Group on Internsational Agricultural Research\\
+CAAS & Chinese Academy of Agricultural Science\\
+CGIAR & Consultative Group on International Agricultural Research\\
+CNV & Copy Number Variations\\
+CRF & Conditional Random Fields\\
+ETL & Extraction Transform Load\\
+GCP & Generation Challenge Programme\\
 GFVO & Genomic Feature and Variation Ontology\\
 GAF & Gene Ontology Annotation File \\
+GAV & Global As View\\
 GFF & Generic Feature Format\\
+HTTP & HyperText Transfer Protocol\\
 IRI & International Resource Identifier\\
+IRGSP & International Rice Genome Sequencing Project\\
 IRRI & International Rice Research Institute \\
+LAV & Local As View\\
+LSTM & Long Short Term Memory\\
+LOV & Linked Open Vocabulary\\
 MIAPPE & Minimum Information About a Plant Phenotyping Experiment\\
+NER & Named Entity Recognition\\
 NGS & Next Generation Sequencing\\
+OBO & Open Biomedical Ontologies\\
+QTL & Quantitative Trait Loci\\
 RDF & Resource Description Framework\\
-SQR & systèmes de question-réponses\\
+SGBD & Système de Gestion de Base de Données\\
+SNP & Single Nucleotide Polymorphism\\
+SQR & Systèmes de Question-Réponses\\
 URI  & Uniform Resource Identifier \\
 VCF & Variant Call Format\\
+XML & eXtensible Markup Language\\
 \end{abbreviations}
-\end{comment}
+%\end{comment}
 %----------------------------------------------------------------------------------------
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -301,7 +333,7 @@ $\omega$ & angular frequency & \si{\radian} \\
 \include{Chapters/publications}
 %\includepdf[pages={11-23}]{Larmande_manuscript.pdf}
 %\include{Chapters/Contributions}
-\part{Intégration de Données Multi-Échelles et Extraction de Connaissances en Agronomie: Exemples et Perspectives} % Main chapter title
+\part{Intégration de Données Multi-Échelles et Extraction de Connaissances en Agronomie : Exemples et Perspectives} % Main chapter title
 \label{Perspectives}
 \include{Chapters/Perspective}
 %\include{Chapters/Chapter2} 
@@ -326,12 +358,16 @@ $\omega$ & angular frequency & \si{\radian} \\
 
 \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
 
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
 
 \chapter{Article 1}
 \includepdf[pages={1-15}]{Biosemantic.pdf}
 
 \chapter{Article 2}
-\includepdf[pages={1-14}]{NER.pdf}
+\includepdf[pages={1-9}]{Gigwa.pdf}
 
 \chapter{Article 3}
 \includepdf[pages={1-17}]{AgroLD.pdf}
